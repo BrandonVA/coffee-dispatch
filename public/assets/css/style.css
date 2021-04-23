@@ -2,21 +2,20 @@
   list-style: none;
   display: flex;
 }
-nav li#logo {
-  color: red;
-  cursor: pointer;
-  margin: 10px;
+
+body {
+  font-family: "Vollkorn", serif;
 }
-nav li {
-  color: blue;
-  cursor: pointer;
-  margin: 10px;
-}
+
 /* ___________________________________________ */
+
+a {
+  text-decoration: none;
+}
 
 #btn-test {
   padding: 5px 8px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   background-color: rgb(45, 216, 45);
   color: black;
   border: 1px darkgreen solid;
@@ -31,7 +30,7 @@ nav li {
 /* Heading styles___________________________ */
 #heading-nav {
   max-width: 100%;
-  background-color: blanchedalmond;
+  background-color: rgb(243, 242, 233);
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -48,4 +47,33 @@ ul.nav-list li,
 ul.nav-auth li {
   margin: 0.5rem;
   cursor: pointer;
+}
+nav li#logo {
+  color: rgb(68, 68, 68);
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+nav li a,
+nav li {
+  color: rgb(107, 107, 107);
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-family: "Vollkorn", serif;
+}
+
+nav li a:hover,
+nav li:hover {
+  color: rgb(44, 44, 44);
+}
+
+.nav-auth li#line-break {
+  margin: 0;
+  font-size: 2rem;
+}
+.nav-auth li#line-break:hover {
+  color: rgb(107, 107, 107);
+  cursor: default;
 }
