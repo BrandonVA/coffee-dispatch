@@ -16,7 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
+app.get("/services", function (req, res) {
+  res.sendFile(path.join(__dirname, "public/plain-js-playground.html"));
+});
+app.get("/contact", function (req, res) {
+  res.sendFile(path.join(__dirname, "public/contact.html"));
 });
 
 // Starts the server to begin listening
