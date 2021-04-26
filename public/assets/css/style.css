@@ -3,8 +3,38 @@
   display: flex;
 }
 
+html,
 body {
   font-family: "Vollkorn", serif;
+  min-height: 100%;
+  height: 100%;
+}
+
+/* ____________________________Main Content index___________________________ */
+#landing-page {
+  background-image: url("../images/machine-2cups.jpg");
+  /* height: 100%; */
+  /* Location of the image */
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn’t tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn’t move when
+the content’s height is greater than the image’s height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+on the container’s size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+while the background image is loading */
+  background-color: #464646;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ___________________________________________ */
@@ -30,7 +60,12 @@ a {
 /* Heading styles___________________________ */
 #heading-nav {
   max-width: 100%;
-  background-color: rgb(243, 242, 233);
+  /* background-color: rgb(26, 30, 33); */
+  background: linear-gradient(
+    to right,
+    rgb(0 0 0 / 93%),
+    rgba(255, 255, 255, 0)
+  );
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -49,7 +84,7 @@ ul.nav-auth li {
   cursor: pointer;
 }
 nav li#logo {
-  color: rgb(68, 68, 68);
+  color: rgb(209, 209, 207);
   cursor: pointer;
   font-weight: bold;
   margin-right: 1rem;
@@ -58,7 +93,7 @@ nav li#logo {
 
 nav li a,
 nav li {
-  color: rgb(107, 107, 107);
+  color: rgb(209, 209, 207);
   cursor: pointer;
   font-size: 1.25rem;
   font-family: "Vollkorn", serif;
@@ -76,4 +111,41 @@ nav li:hover {
 .nav-auth li#line-break:hover {
   color: rgb(107, 107, 107);
   cursor: default;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  background: linear-gradient(
+    to right,
+    /* rgb(0 0 0 / 93%), */ rgba(0, 0, 0, 0.877),
+    rgba(0, 0, 0, 0.616),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.welcome-message {
+  padding: 0 30px;
+  max-width: 40%;
+  margin-bottom: 15%;
+}
+.main-h1 {
+  text-align: center;
+  color: #925524;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main-p {
+  color: rgb(209, 209, 207);
+  font-size: 18px;
+  line-height: 1.4rem;
 }
