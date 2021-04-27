@@ -60,15 +60,18 @@ a {
 /* Heading styles___________________________ */
 #heading-nav {
   max-width: 100%;
-  /* background-color: rgb(26, 30, 33); */
+  background-color: rgb(26, 30, 33);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav.landing-page {
   background: linear-gradient(
     to right,
     rgb(0 0 0 / 93%),
     rgba(255, 255, 255, 0)
-  );
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  ) !important;
 }
 
 .nav-list,
@@ -148,4 +151,86 @@ nav li:hover {
   color: rgb(209, 209, 207);
   font-size: 18px;
   line-height: 1.4rem;
+}
+/* ____________________________Auth Forms____________________ */
+.auth-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.auth-form {
+  max-width: 400px;
+  font-size: 16px;
+}
+.auth-input {
+  /* width: 50%; */
+  overflow: hidden;
+  position: relative;
+  max-height: 50px;
+  margin: 15px;
+}
+
+.auth-input input {
+  width: 100%;
+  height: 100%;
+  color: #925524;
+  padding-top: 20px;
+
+  border: none;
+}
+
+.auth-input label {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+
+.auth-input label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #925524;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3 ease;
+}
+
+.auth-input input:focus + .label-name .content-name,
+.auth-input input:valid + .label-name .content-name {
+  transform: translateY(-98%);
+  color: #925524;
+}
+.auth-input input:focus + .label-name::after,
+.auth-input input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.auth-input
+  input:not(:placeholder-shown):not(:focus):invalid
+  + .label-name
+  .content-name {
+  transform: translateY(-98%);
+  color: red;
 }

@@ -26,14 +26,38 @@
         <li><a href="/signup">Sign-Up</a></li>
       </ul>
     </nav>
-    <main>
-      <section>
-        <form id="loginForm" method="post">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
-          <button id="loginBtn" type="submit">Submit</button>
+    <main class="auth-main">
+      <section class="form-section">
+        <form id="loginForm" method="post" class="auth-form">
+          <div class="auth-input">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" "
+              autocomplete="off"
+              required
+            />
+            <label for="email" class="label-name">
+              <span class="content-name">Email</span>
+            </label>
+          </div>
+
+          <div class="auth-input">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder=" "
+              autocomplete="off"
+              required
+            />
+            <label for="password" class="label-name">
+              <span class="content-name">Password</span>
+            </label>
+          </div>
+
+          <!-- <button id="loginBtn" type="submit">Submit</button> -->
         </form>
       </section>
     </main>
