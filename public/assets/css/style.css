@@ -8,6 +8,12 @@ body {
   font-family: "Vollkorn", serif;
   min-height: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  background-color: #c9c9c9;
+  flex-grow: 1;
 }
 
 /* ____________________________Main Content index___________________________ */
@@ -33,8 +39,6 @@ on the container’s size */
   /* Set a background color that will be displayed
 while the background image is loading */
   background-color: #464646;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ___________________________________________ */
@@ -118,7 +122,6 @@ nav li:hover {
 
 .main-content {
   display: flex;
-  flex-grow: 1;
   background: linear-gradient(
     to right,
     /* rgb(0 0 0 / 93%), */ rgba(0, 0, 0, 0.877),
@@ -163,7 +166,7 @@ nav li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  flex-grow: 1;
 }
 .auth-form {
   max-width: 400px;
@@ -182,8 +185,16 @@ nav li:hover {
   height: 100%;
   color: #925524;
   padding-top: 20px;
-
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    white 43%,
+    rgb(224, 240, 255) 43%,
+    rgb(224, 240, 255) 50%,
+    rgb(224, 240, 255) 100%
+  );
   border: none;
+  border-radius: 5px;
 }
 
 .auth-input label {
@@ -191,6 +202,7 @@ nav li:hover {
   position: absolute;
   bottom: 0px;
   left: 0%;
+  padding-left: 5px;
   width: 100%;
   height: 100%;
   pointer-events: none;
@@ -211,17 +223,19 @@ nav li:hover {
 
 .content-name {
   position: absolute;
-  left: 0px;
-  bottom: 5px;
-  left: 0px;
+  bottom: 3px;
+  left: 3px;
+  /* padding-left: 3px; */
   transition: all 0.3 ease;
 }
 
+.auth-input input:hover + .label-name .content-name,
 .auth-input input:focus + .label-name .content-name,
 .auth-input input:valid + .label-name .content-name {
   transform: translateY(-98%);
   color: #925524;
 }
+.auth-input input:hover + .label-name::after,
 .auth-input input:focus + .label-name::after,
 .auth-input input:valid + .label-name::after {
   transform: translateX(0%);
@@ -233,4 +247,42 @@ nav li:hover {
   .content-name {
   transform: translateY(-98%);
   color: red;
+}
+.form-title {
+  font-weight: bold;
+  font-size: x-large;
+  margin: 15px;
+  text-align: center;
+  color: #925524;
+}
+hr {
+  border: 0.25px solid #ddd;
+}
+.form-btn {
+  padding: 6px 10px;
+  color: #925524;
+  background-color: #cacaca;
+  border: none;
+  margin: 10px 15px;
+  float: right;
+}
+.form-btn:hover {
+  color: #925524;
+  background-color: #9b9b9b;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.form-parent {
+  max-width: 400px;
+  width: 350px;
+  padding: 20px;
+  margin-bottom: 10%;
+  background-color: #fff;
+}
+
+/*  __________Box Shadow __________ */
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
 }
