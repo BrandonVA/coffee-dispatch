@@ -28,16 +28,70 @@
     </nav>
     <main class="auth-main">
       <section class="form-section">
-        <form id="signupForm" method="post" class="auth-form">
-          <label for="email">Email:</label>
-          <input type="email" name="email" id="email" />
-          <label for="password">Password:</label>
-          <input type="password" name="password" id="password" />
-          <label for="confirmPassword">Confirm Password:</label>
-          <input type="password" name="confirmPassword" id="confirmPassword" />
-          <button id="signupBtn" type="submit">Submit</button>
-        </form>
+        <div class="form-parent shadow">
+          <h2 class="form-title">Sign Up</h1>
+            <hr />
+          <form id="signupForm" method="post" class="auth-form">
+            <div class="auth-input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="email" class="label-name">
+                <span class="content-name">Email</span>
+              </label>
+            </div>
+            <div class="auth-input">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="password" class="label-name">
+                <span class="content-name">Password</span>
+              </label>
+            </div>
+            <div class="auth-input">
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="confirmPassword" class="label-name">
+                <span class="content-name">Confirm Password</span>
+              </label>
+            </div>
+           <button id="signupBtn" class="form-btn shadow" type="submit">Submit</button>
+          </form>
+        </div>
       </section>
+      <!-- <section class="form-section">
+        <div class="form-parent shadow">
+          <form id="signupForm" method="post" class="auth-form">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" />
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+            />
+            
+          </form>
+        </div>
+      </section> -->
     </main>
     <script src="./assets/js/signup.js"></script>
   </body>
