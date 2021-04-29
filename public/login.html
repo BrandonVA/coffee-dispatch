@@ -28,37 +28,39 @@
     </nav>
     <main class="auth-main">
       <section class="form-section">
-        <form id="loginForm" method="post" class="auth-form">
-          <div class="auth-input">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder=" "
-              autocomplete="off"
-              required
-            />
-            <label for="email" class="label-name">
-              <span class="content-name">Email</span>
-            </label>
-          </div>
-
-          <div class="auth-input">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder=" "
-              autocomplete="off"
-              required
-            />
-            <label for="password" class="label-name">
-              <span class="content-name">Password</span>
-            </label>
-          </div>
-
-          <!-- <button id="loginBtn" type="submit">Submit</button> -->
-        </form>
+        <div class="form-parent shadow">
+          <h2 class="form-title">Log In</h1>
+            <hr />
+          <form id="loginForm" method="post" class="auth-form">
+            <div class="auth-input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="email" class="label-name">
+                <span class="content-name">Email</span>
+              </label>
+            </div>
+            <div class="auth-input">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder=" "
+                autocomplete="off"
+                required
+              />
+              <label for="password" class="label-name">
+                <span class="content-name">Password</span>
+              </label>
+            </div>
+            <button id="loginBtn" type="submit" class="form-btn shadow">Submit</button>
+          </form>
+        </div>
       </section>
     </main>
     <script src="./assets/js/login.js"></script>
