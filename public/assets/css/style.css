@@ -196,6 +196,19 @@ nav li:hover {
   border: none;
   border-radius: 5px;
 }
+button.btn-show-pass {
+  position: absolute;
+  padding: 0px;
+  bottom: 2px;
+  right: 3px;
+  background-color: transparent;
+  border: none;
+  height: 18px;
+  width: 22px;
+}
+.auth-input button.btn-show-pass:hover {
+  color: gray;
+}
 
 .auth-input label {
   display: block;
